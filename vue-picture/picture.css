@@ -1,0 +1,205 @@
+.wrapper {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0e0e0e;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 26px 0 30px;
+    background-color: #F3F3F3;
+    border: 1px solid #e4e4e4;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0px 0px 28px #dedede;
+    cursor: move;
+}
+.content .cage {
+    position: relative;
+    overflow: hidden;
+}
+.content .cage-sub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content .pic {
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px;
+    cursor: pointer;
+    line-height: 10px;
+}
+.close .icon {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+.close .icon:before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    width: 1px;
+    height: 18px;
+    background: #909090;
+    transform: rotate(45deg);
+}
+.close .icon:after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    width: 1px;
+    height: 18px;
+    background: #909090;
+    transform: rotate(-45deg);
+}
+.close:hover .icon:before,
+.close:hover .icon:after {
+    background: #32495e;
+}
+
+.percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* 工具栏操作 */
+.tool {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 31px;
+    text-align: center;
+    z-index: 3;
+}
+.tool .toolct {
+    height: 30px;
+    background-color: #6f6965;
+    padding: 5px 14px;
+    box-sizing: border-box;
+}
+.tool .item {
+    margin-right: 20px;
+}
+.tool .item-spe {
+    margin-right: 0;
+}
+
+.tool .icon {
+    display: inline-block;
+    cursor: pointer;
+}
+.tool .bigger .icon-bigger {
+    width: 20px;
+    height: 19px;
+    background-image: url(./images/bigger.png);
+}
+.tool .smaller .icon-smaller {
+    width: 20px;
+    height: 19px;
+    background-image: url(./images/smaller.png);
+}
+.tool .rotate .icon-rotate {
+    width: 17px;
+    height: 20px;
+    background-image: url(./images/rotate.png);
+}
+
+/* 上下页按钮 */
+.btn {
+    position: relative;
+    top: -9px;
+    cursor: pointer;
+}
+.btn-pre .icon,
+.btn-next .icon {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: #d8d8d8;
+    z-index: 2;
+    border-radius: 50%;
+}
+.btn-pre .icon:hover,
+.btn-next .icon:hover {
+    opacity: 1;
+}
+
+.btn-pre {}
+.btn-pre .icon:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 8px;
+    height: 1px;
+    transform: rotate(45deg);
+    background: #d8d8d8;
+}
+.btn-pre .icon:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 8px;
+    height: 1px;
+    transform: rotate(-45deg);
+    z-index: 1;
+    background: #d8d8d8;
+}
+
+.btn-next .icon {
+    transform: rotate(180deg);
+}
+.btn-next .icon:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 8px;
+    height: 1px;
+    transform: rotate(45deg);
+    background: #d8d8d8;
+}
+.btn-next .icon:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 8px;
+    height: 1px;
+    transform: rotate(-45deg);
+    z-index: 1;
+    background: #d8d8d8;
+}
